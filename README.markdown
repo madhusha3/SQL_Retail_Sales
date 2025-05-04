@@ -246,9 +246,9 @@ Developed queries to address 10 business questions, showcasing analytical depth:
 
 I’m a passionate data analyst with a strong foundation in SQL, Python, and data visualization. This project is part of my portfolio to demonstrate my ability to extract insights from data and communicate them effectively. I’m eager to contribute my skills to a data-driven organization.
 
-- **LinkedIn**: [Your LinkedIn Profile URL](https://www.linkedin.com/in/madhusudann5397/)
-- **GitHub**: [Your GitHub Profile URL](https://github.com/madhusha3)
-- **Email**: iammadhusudan.n@gmail.com
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/madhusudann5397/)
+- **GitHub**: [Follow me for Real World Projects!](https://github.com/madhusha3)
+- **Email**: [Drop me a mail✉️](mailto:iammadhusudan.n@gmail.com)
 
 ## Contact
 
