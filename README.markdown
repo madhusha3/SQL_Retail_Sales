@@ -115,13 +115,13 @@ SELECT DISTINCT category AS category FROM retail_sales;
 
 Developed queries to address 10 business questions, showcasing analytical depth:
 
-1. **Sales on a Specific Date**: Retrieved transactions for November 5, 2022.
+1. **Sales on a Specific Date**: Write a SQL query to retrieve all columns for sales made on '2022-11-05.
    ```sql
    SELECT * FROM retail_sales
    WHERE sale_date = '2022-11-05';
    ```
 
-2. **Clothing Sales in November 2022**: Identified transactions with quantity ≥ 4.
+2. **Clothing Sales in November 2022**: Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022.
    ```sql
    SELECT * FROM retail_sales
    WHERE category = 'Clothing'
@@ -129,14 +129,14 @@ Developed queries to address 10 business questions, showcasing analytical depth:
        AND quantiy >= 4;
    ```
 
-3. **Total Sales by Category**: Calculated net sales and order counts.
+3. **Total Sales by Category**: Write a SQL query to calculate the total sales (total_sale) for each category.
    ```sql
    SELECT category, SUM(total_sale) AS total_sales, COUNT(quantiy) AS total_orders
    FROM retail_sales
    GROUP BY category;
    ```
 
-4. **Average Age in Beauty Category**: Computed average customer age, segmented by gender.
+4. **Average Age in Beauty Category**: Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.
    ```sql
    SELECT ROUND(AVG(age), 2) AS avg_age, gender
    FROM retail_sales
@@ -144,13 +144,13 @@ Developed queries to address 10 business questions, showcasing analytical depth:
    GROUP BY gender;
    ```
 
-5. **High-Value Transactions**: Identified sales exceeding $1000.
+5. **High-Value Transactions**: Write a SQL query to find all transactions where the total_sale is greater than 1000.
    ```sql
    SELECT * FROM retail_sales
    WHERE total_sale >= 1000;
    ```
 
-6. **Transactions by Gender and Category**: Counted transactions per group.
+6. **Transactions by Gender and Category**: Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
    ```sql
    SELECT category, gender, COUNT(DISTINCT transactions_id) AS total_transactions
    FROM retail_sales
@@ -158,7 +158,7 @@ Developed queries to address 10 business questions, showcasing analytical depth:
    ORDER BY category;
    ```
 
-7. **Best-Selling Month per Year**: Calculated average monthly sales and ranked top months.
+7. **Best-Selling Month per Year**: Write a SQL query to calculate the average sale for each month. Find out best selling month in each year.
    ```sql
    SELECT year, month, avg_monthly_sales
    FROM (
@@ -172,7 +172,7 @@ Developed queries to address 10 business questions, showcasing analytical depth:
    WHERE sales_rank = 1;
    ```
 
-8. **Top 5 Customers**: Identified customers with highest total sales.
+8. **Top 5 Customers**: Write a SQL query to find the top 5 customers based on the highest total sales.
    ```sql
    SELECT customer_id, SUM(total_sale) AS total_sales
    FROM retail_sales
@@ -181,14 +181,14 @@ Developed queries to address 10 business questions, showcasing analytical depth:
    LIMIT 5;
    ```
 
-9. **Unique Customers by Category**: Counted distinct customers per category.
+9. **Unique Customers by Category**: Write a SQL query to find the number of unique customers who purchased items from each category.
    ```sql
    SELECT category, COUNT(DISTINCT customer_id) AS count_of_unique_customers
    FROM retail_sales
    GROUP BY category;
    ```
 
-10. **Orders by Shift**: Categorized orders by time of day (Morning, Afternoon, Evening).
+10. **Orders by Shift**: Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17).
     ```sql
     WITH hourly_sale AS (
         SELECT *,
@@ -211,14 +211,6 @@ Developed queries to address 10 business questions, showcasing analytical depth:
 - **Category Performance**: Highlighted top-performing categories, aiding inventory decisions.
 - **Operational Efficiency**: Shift-based analysis revealed staffing optimization opportunities.
 
-## Visualizations (Optional)
-
-To enhance this project, I plan to integrate Python (e.g., Pandas, Matplotlib) to create visualizations such as:
-- Bar charts for category-wise sales.
-- Line graphs for monthly sales trends.
-- Pie charts for shift-based order distribution.
-
-*Note*: Visualizations are not included in this repository but can be added upon request.
 
 ## Tools & Technologies
 
@@ -254,19 +246,13 @@ To enhance this project, I plan to integrate Python (e.g., Pandas, Matplotlib) t
 
 I’m a passionate data analyst with a strong foundation in SQL, Python, and data visualization. This project is part of my portfolio to demonstrate my ability to extract insights from data and communicate them effectively. I’m eager to contribute my skills to a data-driven organization.
 
-- **LinkedIn**: [Your LinkedIn Profile URL]
-- **GitHub**: [Your GitHub Profile URL]
-- **Email**: [Your Email Address]
-
-## Future Improvements
-
-- **Advanced Analytics**: Incorporate predictive modeling using Python or R.
-- **Dashboard Creation**: Build interactive dashboards with Tableau or Power BI.
-- **Automation**: Script data ingestion and cleaning processes for efficiency.
+- **LinkedIn**: [[Your LinkedIn Profile URL](https://www.linkedin.com/in/madhusudann5397/)]
+- **GitHub**: [[Your GitHub Profile URL](https://github.com/madhusha3)]
+- **Email**: [iammadhusudan.n@gmail.com]
 
 ## Contact
 
-For feedback, questions, or collaboration opportunities, please reach out via [Your Email Address] or LinkedIn. I’m excited to connect with hiring managers and fellow data enthusiasts!
+For feedback, questions, or collaboration opportunities, please reach out via [iammadhusudan.n@gmail.com] or LinkedIn. I’m excited to connect with hiring managers and fellow data enthusiasts!
 
 ---
 
